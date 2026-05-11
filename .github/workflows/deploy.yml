@@ -16,6 +16,7 @@ jobs:
           channel: 'stable'
 
       - name: Build Web
+        working-directory: ./frontend
         run: flutter build web --release
 
       - name: Deploy to Cloudflare
@@ -24,4 +25,4 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           projectName: cloud
-          directory: build/web
+          directory: frontendbuild/web
