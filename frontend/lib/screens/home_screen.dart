@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../models/file_item.dart';
 import '../widgets/responsive_layout.dart';
+import '../theme/app_theme.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -199,7 +200,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text('Home Server', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
-                          Icon(CupertinoIcons.desktopcomputer, color: CupertinoColors.activeBlue),
+                          Icon(CupertinoIcons.desktopcomputer, color: AppTheme.cloudPurple),
                         ],
                       ),
                       const SizedBox(height: 12),
