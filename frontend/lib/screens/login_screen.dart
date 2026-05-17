@@ -22,10 +22,10 @@ class _LoginScreenState extends State<LoginScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              const Icon(
-                CupertinoIcons.lock_shield_fill,
-                size: 80,
-                color: CupertinoColors.activeBlue,
+              Image(
+                image: AssetImage('assets/icons/icon.png'),
+                width: 100,
+                height: 100,
               ),
               const SizedBox(height: 24),
               const Text(
@@ -50,9 +50,9 @@ class _LoginScreenState extends State<LoginScreen> {
               // Kotak Input 1: Access Key (Username)
               CupertinoTextField(
                 padding: const EdgeInsets.all(16),
-                prefix: const Padding(
-                  padding: EdgeInsets.only(left: 16.0),
-                  child: Icon(CupertinoIcons.person_solid, color: CupertinoColors.systemGrey),
+                prefix: Padding(
+                  padding: const EdgeInsets.only(left: 16.0),
+                  child: Icon(Icons.person, color: CupertinoColors.systemGrey),
                 ),
                 placeholder: 'Username',
                 decoration: BoxDecoration(
@@ -67,14 +67,14 @@ class _LoginScreenState extends State<LoginScreen> {
                 padding: const EdgeInsets.all(16),
                 prefix: const Padding(
                   padding: EdgeInsets.only(left: 16.0),
-                  child: Icon(CupertinoIcons.padlock_solid, color: CupertinoColors.systemGrey),
+                  child: Icon(Icons.lock, color: CupertinoColors.systemGrey),
                 ),
                 placeholder: 'Password',
                 obscureText: _obscureText,
                 suffix: CupertinoButton(
                   padding: EdgeInsets.zero,
                   child: Icon(
-                    _obscureText ? CupertinoIcons.eye : CupertinoIcons.eye_slash,
+                    _obscureText ? Icons.visibility : Icons.visibility_off,
                     color: CupertinoColors.systemGrey,
                   ),
                   onPressed: () {

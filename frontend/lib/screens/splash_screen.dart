@@ -37,10 +37,10 @@ class _SplashScreenState extends State<SplashScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(
-              CupertinoIcons.cloud_fill,
-              size: 100,
-              color: Colors.white,
+            Image(
+              image: AssetImage('assets/icons/icon.png'),
+              width: 100,
+              height: 100,
             ),
             SizedBox(height: 20),
             Text(
